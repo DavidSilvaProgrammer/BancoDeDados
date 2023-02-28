@@ -18,3 +18,7 @@ publicacao VARCHAR(n) DEFAULT '1000',
 
 ALTER TABLE publicacoes ADD FOREIGN KEY(codigo_usuario) REFERENCES usuarios
 (codigo_usuario)
+
+/*
+Existem ferramentas on-line destinadas à criação de cada um desses modelos vistos. Uma dessas é o brModelo, que é simples e de fácil uso. 
+*/
