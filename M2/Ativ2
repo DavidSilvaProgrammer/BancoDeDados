@@ -2,3 +2,24 @@ De acordo com o conteúdo estudado, cite exemplos de Sistemas de Bancos de Dados
 
 Realize essa atividade no WORD ou no Bloco de Notas, suba esse arquivo para algum repositório e compartilhe o 
 link no campo ao lado para que outros desenvolvedores possam analisá-lo. 
+
+Exemplos de sistemas de banco de dados relacionais e não relacionais:
+
+Relacionais
+
+    MySQL
+    Oracle DB
+    SQL Server
+    Maria DB
+    PostgreSQL
+
+Não relacionais
+
+    Redis
+    Memcached
+    Cassandra
+    Hbase
+    Amazon DynamoDB
+    Neo4j
+    MongoDB
+
