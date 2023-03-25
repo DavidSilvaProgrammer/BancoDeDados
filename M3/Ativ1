@@ -4,48 +4,85 @@ Após isso, realize todos os comandos Joins estudados.
 Trabalhe esse código em seu IDE, suba ele para sua conta no GitHub e compartilhe o link desse projeto 
 no campo ao lado para que outros desenvolvedores possam analisá-lo. */
 
-create database loja;
-use loja;
+create database futebol;
+use futebol;
 
-create table CLIENTES(
-	ID int,
+create table TIMES_BRASILEIROS (
+    ID int auto_increment,
     NOME varchar(100),
-    CPF varchar(11),
+    CIDADE varchar(100),
     primary key (ID)
 );
 
-create table PRODUTOS(
-	ID_PRODUTO int,
-    NOME_PRODUTO varchar(100),
-    PRECO_PRODUTO float,
-    CATEGORIA_PRODUTO varchar(100),
-    primary key (ID_PRODUTO)
+create table TIMES_INGLES ( 
+    ID int auto_increment,
+    NOME varchar(100),
+    CIDADE varchar(100),
+    primary key (ID)
 );
 
-create table VENDAS(
-	ID_VENDA int,
-    ID_CLIENTE int,
-    ID_PRODUTO int,
-    primary key (ID_VENDA),
-    foreign key (ID_CLIENTE)
-		references CLIENTES(ID),
-	foreign key (ID_PRODUTO)
-		references PRODUTOS(ID_PRODUTO)
+create table JOGADORES (
+    ID int auto_increment,
+    NOME varchar(100),
+    ID_TIME int,
+    primary key (ID),
+    foreign key (ID_TIME)
+        references TIMES_BRASILEIROS(ID) on delete cascade
 );
 
-insert into CLIENTES (ID, NOME, CPF) values (1, 'Pedro', '12345678901'), (2, 'Ana', '23456789012'), (3, 'Lucas', '34567890123');
-insert into PRODUTOS (ID_PRODUTO, NOME_PRODUTO, PRECO_PRODUTO, CATEGORIA_PRODUTO) values (1, 'Cadeira', 80.00, 'Móveis'), (2, 'Televisor', 1200.00, 'Eletrônicos'), (3, 'Ventilador', 200.00, 'Eletrodomésticos');
-insert into VENDAS (ID_VENDA, ID_CLIENTE, ID_PRODUTO) values (1, 2, 3), (2, 1, 2), (3, 3, 1);
-insert into VENDAS (ID_VENDA, ID_CLIENTE, ID_PRODUTO) values (4, NULL, NULL);
+create table TECNICOS (
+    ID int auto_increment,
+    NOME varchar(100),
+    ID_TIME int,
+    primary key (ID),
+    foreign key (ID_TIME)
+        references TIMES_BRASILEIROS(ID) on delete cascade
+);
 
-select NOME, NOME_PRODUTO from VENDAS inner join (CLIENTES, PRODUTOS)
-	on (CLIENTES.ID = VENDAS.ID_CLIENTE and PRODUTOS.ID_PRODUTO = VENDAS.ID_PRODUTO);
-select CPF, NOME_PRODUTO from VENDAS left join (CLIENTES, PRODUTOS)
-	on (CLIENTES.ID = VENDAS.ID_CLIENTE and PRODUTOS.ID_PRODUTO = VENDAS.ID_PRODUTO);
-select NOME, NOME_PRODUTO, PRECO_PRODUTO from VENDAS right join (CLIENTES, PRODUTOS)
-	on (CLIENTES.ID = VENDAS.ID_CLIENTE and PRODUTOS.ID_PRODUTO = VENDAS.ID_PRODUTO);
-select NOME, NOME_PRODUTO, PRECO_PRODUTO from VENDAS left join (CLIENTES, PRODUTOS)
-	on (CLIENTES.ID = VENDAS.ID_CLIENTE and PRODUTOS.ID_PRODUTO = VENDAS.ID_PRODUTO)
-    union
-select NOME, NOME_PRODUTO, PRECO_PRODUTO from VENDAS right join (CLIENTES, PRODUTOS)
-	on (CLIENTES.ID = VENDAS.ID_CLIENTE and PRODUTOS.ID_PRODUTO = VENDAS.ID_PRODUTO);
+insert into TIMES_BRASILEIROS (NOME, CIDADE) values
+    ('São Paulo FC', 'São Paulo'),
+    ('CR Flamengo', 'Rio de Janeiro'),
+    ('Grêmio FBPA', 'Porto Alegre'),
+    ('SE Palmeiras', 'São Paulo');
+
+insert into TIMES_INGLES (NOME, CIDADE) values
+    ('Manchester United', 'Manchester'),
+    ('Arsenal', 'Londres'),
+    ('Chelsea', 'Londres'),
+    ('Liverpool FC', 'Liverpool');
+
+insert into JOGADORES (NOME, ID_TIME) values
+    ('Hernanes', 1),
+    ('Bruno Henrique', 2),
+    ('Geromel', 3),
+    ('Gustavo Scarpa', 4);
+
+insert into TECNICOS (NOME, ID_TIME) values
+    ('Hernán Crespo', 1),
+    ('Renato Portaluppi', 3),
+    ('Abel Ferreira', 4),
+    ('Ole Gunnar Solskjær', 1);
+
+-- inner join
+select T.NOME as NOME_TIME, J.NOME as NOME_JOGADOR, TC.NOME as NOME_TECNICO 
+from JOGADORES as J 
+inner join TIMES_BRASILEIROS as T on T.ID = J.ID_TIME 
+inner join TECNICOS as TC on TC.ID_TIME = T.ID;
+
+-- left join
+select T.NOME as NOME_TIME, J.NOME as NOME_JOGADOR, TC.NOME as NOME_TECNICO 
+from JOGADORES as J 
+left join TIMES_BRASILEIROS as T on T.ID = J.ID_TIME 
+left join TECNICOS as TC on TC.ID_TIME = T.ID;
+
+-- right join
+select T.NOME as NOME_TIME, J.NOME as NOME_JOGADOR, TC.NOME as NOME_TECNICO 
+from JOGADORES as J 
+right join TIMES_BRASILEIROS as T on T.ID = J.ID_TIME 
+right join TECNICOS as TC on TC.ID_TIME = T.ID;
+
+-- outer join
+select T.NOME as NOME_TIME, J.NOME as NOME_JOGADOR, TC.NOME as NOME_TECNICO 
+from JOGADORES as J 
+full outer join TIMES_BRASILEIROS as T on T.ID = J.ID_TIME 
+full outer join TECNICOS as TC on TC.ID_TIME = T.ID;
