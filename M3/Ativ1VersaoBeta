@@ -1,0 +1,40 @@
+CREATE DATABASE meu_banco_de_dados;
+
+USE meu_banco_de_dados;
+
+CREATE TABLE tabela1 (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50),
+    idade INT
+);
+
+CREATE TABLE tabela2 (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    descricao VARCHAR(100),
+    tabela1_id INT,
+    FOREIGN KEY (tabela1_id) REFERENCES tabela1(id)
+);
+
+INSERT INTO tabela1 (nome, idade) VALUES ('João', 25);
+INSERT INTO tabela1 (nome, idade) VALUES ('Maria', 30);
+INSERT INTO tabela1 (nome, idade) VALUES ('Pedro', 20);
+
+INSERT INTO tabela2 (descricao, tabela1_id) VALUES ('Descrição 1', 1);
+INSERT INTO tabela2 (descricao, tabela1_id) VALUES ('Descrição 2', 2);
+INSERT INTO tabela2 (descricao, tabela1_id) VALUES ('Descrição 3', 3);
+
+SELECT tabela1.nome, tabela1.idade, tabela2.descricao 
+FROM tabela1 
+INNER JOIN tabela2 ON tabela1.id = tabela2.tabela1_id;
+
+SELECT tabela1.nome, tabela1.idade, tabela2.descricao 
+FROM tabela1 
+LEFT JOIN tabela2 ON tabela1.id = tabela2.tabela1_id;
+
+SELECT tabela1.nome, tabela1.idade, tabela2.descricao 
+FROM tabela1 
+RIGHT JOIN tabela2 ON tabela1.id = tabela2.tabela1_id;
+
+SELECT tabela1.nome, tabela1.idade, tabela2.descricao 
+FROM tabela1 
+FULL OUTER JOIN tabela2 ON tabela1.id = tabela2.tabela1_id;
