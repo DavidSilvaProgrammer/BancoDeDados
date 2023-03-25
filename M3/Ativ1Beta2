@@ -1,0 +1,88 @@
+mo código que você fez. Só acrescente join right e outer join
+
+Claro, segue o código com as modificações solicitadas:
+
+sql
+
+create database futebol;
+use futebol;
+
+create table TIMES_BRASILEIROS (
+    ID int auto_increment,
+    NOME varchar(100),
+    CIDADE varchar(100),
+    primary key (ID)
+);
+
+create table TIMES_INGLES ( 
+    ID int auto_increment,
+    NOME varchar(100),
+    CIDADE varchar(100),
+    primary key (ID)
+);
+
+create table JOGADORES (
+    ID int auto_increment,
+    NOME varchar(100),
+    ID_TIME int,
+    primary key (ID),
+    foreign key (ID_TIME)
+        references TIMES_BRASILEIROS(ID) on delete cascade
+);
+
+create table TECNICOS (
+    ID int auto_increment,
+    NOME varchar(100),
+    ID_TIME int,
+    primary key (ID),
+    foreign key (ID_TIME)
+        references TIMES_BRASILEIROS(ID) on delete cascade
+);
+
+insert into TIMES_BRASILEIROS (NOME, CIDADE) values
+    ('São Paulo FC', 'São Paulo'),
+    ('CR Flamengo', 'Rio de Janeiro'),
+    ('Grêmio FBPA', 'Porto Alegre'),
+    ('SE Palmeiras', 'São Paulo');
+
+insert into TIMES_INGLES (NOME, CIDADE) values
+    ('Manchester United', 'Manchester'),
+    ('Arsenal', 'Londres'),
+    ('Chelsea', 'Londres'),
+    ('Liverpool FC', 'Liverpool');
+
+insert into JOGADORES (NOME, ID_TIME) values
+    ('Hernanes', 1),
+    ('Bruno Henrique', 2),
+    ('Geromel', 3),
+    ('Gustavo Scarpa', 4);
+
+insert into TECNICOS (NOME, ID_TIME) values
+    ('Hernán Crespo', 1),
+    ('Renato Portaluppi', 3),
+    ('Abel Ferreira', 4),
+    ('Ole Gunnar Solskjær', 1);
+
+-- inner join
+select T.NOME as NOME_TIME, J.NOME as NOME_JOGADOR, TC.NOME as NOME_TECNICO 
+from JOGADORES as J 
+inner join TIMES_BRASILEIROS as T on T.ID = J.ID_TIME 
+inner join TECNICOS as TC on TC.ID_TIME = T.ID;
+
+-- left join
+select T.NOME as NOME_TIME, J.NOME as NOME_JOGADOR, TC.NOME as NOME_TECNICO 
+from JOGADORES as J 
+left join TIMES_BRASILEIROS as T on T.ID = J.ID_TIME 
+left join TECNICOS as TC on TC.ID_TIME = T.ID;
+
+-- right join
+select T.NOME as NOME_TIME, J.NOME as NOME_JOGADOR, TC.NOME as NOME_TECNICO 
+from JOGADORES as J 
+right join TIMES_BRASILEIROS as T on T.ID = J.ID_TIME 
+right join TECNICOS as TC on TC.ID_TIME = T.ID;
+
+-- outer join
+select T.NOME as NOME_TIME, J.NOME as NOME_JOGADOR, TC.NOME as NOME_TECNICO 
+from JOGADORES as J 
+full outer join TIMES_BRASILEIROS as T on T.ID = J.ID_TIME 
+full outer join TECNICOS as TC on TC.ID_TIME = T.ID;
