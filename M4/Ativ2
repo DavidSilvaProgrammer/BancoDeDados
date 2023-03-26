@@ -21,12 +21,13 @@ pode orientar seus funcionários a não armazenarem suas senhas em seus disposti
 desprotegida, pois esses aparelhos podem ser furtados, utilizados por terceiros mal-intencionados 
 ou invadidos por algum spyware.
 
-Não se pode olvidar, no entanto, que essas senhas devem ser criptografas de modo eficiente no
-banco de dados da empresa. Vale salientar que a criptografia é um conjunto de técnicas que permite 
-codificar informações de tal forma que só possam ser lidas por pessoas autorizadas, o que significa que
-mesmo se essas informações sejam interceptadas por terceiros, estes não saberão interpretar seu conteúdo.
+Não se pode olvidar, no entanto, que essa empresa precisa implementar algum tipo de criptografia que
+funcione de modo eficiente em seu banco de dados. Vale salientar que a criptografia é 
+um conjunto de técnicas que permite codificar informações de tal forma que só possam ser lidas por 
+pessoas autorizadas, o que significa que mesmo se essas informações sejam interceptadas por terceiros, 
+estes não saberão interpretar seu conteúdo.
 
-Além disso, vale ressaltar que atualmente existem vários algoritmos de criptografia que são utilizados 
+A par disso, ressalta-se que atualmente existem vários algoritmos de criptografia que são utilizados 
 por organizações, no entanto, uns dos três mais comuns são o Advanced Encryption Standard (AES), que é
 um dos mais populares e amplamente divulgados em todo o mundo; Data Encryption Standard (DES), um algoritmo 
 mais antigo, no entanto, muito utilizado; e, por fim, o Triple Data Encryption Standard (3DES), 
