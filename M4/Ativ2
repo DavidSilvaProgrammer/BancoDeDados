@@ -4,3 +4,22 @@ Cite pelo menos três métodos para melhorar essas senhas.
 Realize essa atividade no WORD ou no Bloco de Notas, suba esse arquivo para algum repositório e compartilhe 
 o link no campo ao lado para que outros desenvolvedores possam analisá-lo.*/
 
+1° Exigir que as senhas utilizadas na empresa pelos funcionários tenham no mínimo 8 caracteres, 
+variando entre letras maiúsculas e minúsculas, números e símbolos.
+
+2° Também é fundamental que essas senhas não sigam padrões de fácil identificação, como números 
+que seguem uma contagem regressiva, ou caracteres especiais sendo usados em alusão a letras. 
+Nesse sentido, deve-se evitar, principalmente, alusão aos dados pessoais nas senhas, como datas 
+de aniversários e demais datas comemorativas.
+
+3° Exigir que os funcionários alterem suas senhas regularmente em um período de 90 dias e impedir 
+que eles repitam senhas já utilizadas no sistema. Isso pode evitar que senhas que já foram 
+capturadas por terceiros comprometam a integridade e a confiabilidade de todo o banco de dados.
+
+Além desses métodos que afetam diretamente os códigos que serão cadastrados como senhas, a empresa 
+pode orientar seus funcionários a não armazenarem suas senhas em seus dispostivos eletrônicos de forma 
+desprotegida, pois esses aparelhos podem ser furtados, utilizados por terceiros mal-intencionados 
+ou invadidos por algum spyware.
+
+Referência
+http://www.ufrgs.br/tri/Documentos/guia-de-como-criar-e-manter-uma-boa-senha
