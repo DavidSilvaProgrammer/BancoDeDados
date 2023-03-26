@@ -16,10 +16,22 @@ de aniversários e demais datas comemorativas.
 que eles repitam senhas já utilizadas no sistema. Isso pode evitar que senhas que já foram 
 capturadas por terceiros comprometam a integridade e a confiabilidade de todo o banco de dados.
 
-Além desses métodos que afetam diretamente os códigos que serão cadastrados como senhas, a empresa 
+Fora esses métodos que afetam diretamente nos códigos que serão cadastrados como senhas, a empresa 
 pode orientar seus funcionários a não armazenarem suas senhas em seus dispostivos eletrônicos de forma 
 desprotegida, pois esses aparelhos podem ser furtados, utilizados por terceiros mal-intencionados 
 ou invadidos por algum spyware.
 
-Referência
+Não se pode olvidar, no entanto, que essas senhas devem ser criptografas de modo eficiente no
+banco de dados da empresa. Vale salientar que a criptografia é um conjunto de técnicas que permite 
+codificar informações de tal forma que só possam ser lidas por pessoas autorizadas, mesmo estas
+sejam interceptadas por terceiros.
+
+Além disso, vale ressaltar que atualmente existem vários algoritmos de criptografia que são utilizados 
+por organizações, no entanto, os três mais comuns são o Advanced Encryption Standard (AES), que é
+um dos mais populares e amplamente divulgados em todo o mundo; Data Encryption Standard (DES), um algoritmo 
+mais antigo, no entanto, ainda é muito utilizado; e, por fim, o Triple Data Encryption Standard (3DES), 
+uma versão mais seguro do DES, que usa três chaves diferentes para criptografar dados.
+
+Referências
 http://www.ufrgs.br/tri/Documentos/guia-de-como-criar-e-manter-uma-boa-senha
+https://cryptoid.com.br/criptografia-identificacao-digital-id-biometria/tipos-de-criptografia-conheca-os-10-mais-usados-e-como-funciona-cada-um/
