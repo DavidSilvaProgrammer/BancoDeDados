@@ -22,9 +22,9 @@ desprotegida, pois esses aparelhos podem ser furtados, utilizados por terceiros 
 ou invadidos por algum spyware.
 
 Não se pode olvidar, no entanto, que essa empresa precisa implementar algum tipo de criptografia que
-funcione de modo eficiente em seu banco de dados. Vale salientar que a criptografia é 
-um conjunto de técnicas que permite codificar informações de tal forma que só possam ser lidas por 
-pessoas autorizadas, o que significa que mesmo se essas informações sejam interceptadas por terceiros, 
+funcione de modo eficiente em seu banco de dados. Vale salientar que criptografia é um conjunto de 
+técnicas que permite codificar informações de tal forma que só possam ser lidas por pessoas autorizadas, 
+o que significa que mesmo se essas informações sejam interceptadas por terceiros, 
 estes não saberão interpretar seu conteúdo.
 
 A par disso, ressalta-se que atualmente existem vários algoritmos de criptografia que são utilizados 
