@@ -1,0 +1,16 @@
+Crie uma função que some todos os clientes cadastrados em uma loja durante um dia.
+
+Trabalhe esse código em seu IDE, suba ele para sua conta no GitHub e compartilhe o link 
+desse projeto no campo ao lado para que outros desenvolvedores possam analisá-lo. 
+
+CREATE FUNCTION somar_clientes_por_dia(data DATE)
+RETURNS INT
+BEGIN
+  DECLARE total_clientes INT DEFAULT 0;
+  SELECT COUNT(*) INTO total_clientes FROM clientes WHERE data_cadastro = data;
+  RETURN total_clientes;
+END;
+
+/*Exemplo: chamando a função, recebendo como parametro uma determinada data*/
+
+SELECT somar_clientes_por_dia('2023-03-26');
