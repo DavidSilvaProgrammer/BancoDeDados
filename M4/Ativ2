@@ -23,8 +23,8 @@ ou invadidos por algum spyware.
 
 Não se pode olvidar, no entanto, que essas senhas devem ser criptografas de modo eficiente no
 banco de dados da empresa. Vale salientar que a criptografia é um conjunto de técnicas que permite 
-codificar informações de tal forma que só possam ser lidas por pessoas autorizadas, mesmo estas
-sejam interceptadas por terceiros.
+codificar informações de tal forma que só possam ser lidas por pessoas autorizadas, o que significa que
+mesmo se essas informações sejam interceptadas por terceiros, estes não saberão interpretar seu conteúdo.
 
 Além disso, vale ressaltar que atualmente existem vários algoritmos de criptografia que são utilizados 
 por organizações, no entanto, uns dos três mais comuns são o Advanced Encryption Standard (AES), que é
