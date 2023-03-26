@@ -4,3 +4,47 @@ Explique quais são os pilares da segurança de dados que devem ser seguidos.
 
 Realize essa atividade no WORD ou no Bloco de Notas, suba esse arquivo para algum repositório e compartilhe o link no 
 campo ao lado para que outros desenvolvedores possam analisá-lo. */
+
+Os três pilares da segurança de dados são confiabilidade/confidencialidade, integridade e disponibilidade. 
+Cada um desses pilares é importante para garantir a segurança das informações da empresa.
+
+O primeiro pilar é a confiabilidade/confidencialidade, que se refere à 
+privacidade das informações. Isso significa garantir que os dados da empresa 
+não sejam acessados ou divulgados a pessoas não autorizadas. 
+Para isso, a empresa deve adotar medidas preventivas, como definir 
+o acesso às informações apenas para pessoas autorizadas.
+
+Um exemplo de medida preventiva para garantir a confidencialidade das informações 
+seria o uso de senhas fortes para acesso aos sistemas ou a implementação de políticas 
+rígidas de segurança para os funcionários, como a proibição de compartilhamento 
+de informações confidenciais com terceiros.
+
+O segundo pilar é a integridade, que se refere à preservação da precisão, 
+consistência e confiabilidade das informações. 
+Isso significa garantir que nenhuma interferência externa possa 
+corromper, comprometer ou danificar os dados. 
+Para aumentar a integridade das informações, é necessário fortalecer a 
+infraestrutura de proteção de dados, como a implementação de backups regulares 
+ou o uso de criptografia.
+
+Um exemplo de medida preventiva para garantir a integridade das informações 
+seria a implementação de um sistema de backup regular para evitar a perda de 
+dados em caso de falhas ou ataques cibernéticos.
+
+O terceiro pilar é a disponibilidade, que se refere à acessibilidade dos dados 
+e sistemas da empresa. Isso significa garantir que as informações estejam sempre 
+disponíveis para funcionários, partes interessadas e diretores da empresa. 
+Para isso, a empresa deve adotar medidas preventivas, como garantir que os sistemas 
+estejam sempre atualizados e disponíveis.
+
+Um exemplo de medida preventiva para garantir a disponibilidade das informações seria 
+a implantação de um sistema de redundância de servidores para garantir que os dados 
+estejam sempre disponíveis mesmo em caso de falha do servidor.
+
+Em suma, pode-se concluir que a segurança dos dados é fundamental para proteger as 
+informações de uma organização e garantir que estejam disponíveis, confidenciais e intactas. 
+Cada um dos pilares da segurança de dados é importante para atingir esse objetivo e a 
+adoção de medidas preventivas é fundamental.
+
+Referência
+https://www.penso.com.br/conheca-os-3-pilares-da-seguranca-da-informacao/
