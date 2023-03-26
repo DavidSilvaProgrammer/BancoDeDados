@@ -27,10 +27,10 @@ codificar informações de tal forma que só possam ser lidas por pessoas autori
 sejam interceptadas por terceiros.
 
 Além disso, vale ressaltar que atualmente existem vários algoritmos de criptografia que são utilizados 
-por organizações, no entanto, os três mais comuns são o Advanced Encryption Standard (AES), que é
+por organizações, no entanto, uns dos três mais comuns são o Advanced Encryption Standard (AES), que é
 um dos mais populares e amplamente divulgados em todo o mundo; Data Encryption Standard (DES), um algoritmo 
-mais antigo, no entanto, ainda é muito utilizado; e, por fim, o Triple Data Encryption Standard (3DES), 
-uma versão mais seguro do DES, que usa três chaves diferentes para criptografar dados.
+mais antigo, no entanto, muito utilizado; e, por fim, o Triple Data Encryption Standard (3DES), 
+uma versão mais segura do DES, que usa três chaves diferentes para criptografar dados.
 
 Referências
 http://www.ufrgs.br/tri/Documentos/guia-de-como-criar-e-manter-uma-boa-senha
